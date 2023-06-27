@@ -16,7 +16,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-    </head>
+        <link rel="stylesheet" href="css/button.css">
+        <!-- link button download -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
@@ -47,9 +50,15 @@
                                 <h2 class="text-primary fw-bolder mb-0">Experience</h2>
                                 <!-- Download resume button-->
                                 <!-- Note: Set the link href target to a PDF file within your project-->
-                                <a class="btn btn-primary px-4 py-3" href="assets/CV_moch.Apriyanto_Mahaliyan.pdf">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                    Download Resume
+                                <a href="assets/CV_moch.Apriyanto_Mahaliyan.pdf" class="dld">
+                                    <div class="completed">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Completed</span>
+                                    </div>
+                                    <div class="download">
+                                        <i class="fas fa-download"></i>
+                                        <span>Download</span>
+                                    </div>
                                 </a>
                             </div>
                             <!-- Experience Card 1-->
@@ -179,5 +188,16 @@ Starting with the fundamentals of programming: When I first entered college, I w
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- script button download -->
+        <script>
+            const dld = document.querySelector('.dld')
+            dld.addEventListener('click',()=>{
+                dld.classList.add('active')
+                setTimeout(() => {
+                    dld.classList.remove('active')
+                }, 13000);
+            })
+        </script>
     </body>
 </html>
