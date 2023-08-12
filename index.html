@@ -16,11 +16,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- animasi tulisan gerak -->
+        <link rel="stylesheet" href="css/animation.css">
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
                 <div class="container px-5">
                     <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">My Portofolio</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -41,7 +43,13 @@
                         <div class="col-xxl-5">
                             <!-- Header text content-->
                             <div class="text-center text-xxl-start">
-                                <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Development &middot; It Support</div></div>
+                                <div class="h-animate">
+
+                                    <span class="text first-text">I'm a&nbsp;</span>
+                              
+                                    <span class="text sec-text">Developer</span>
+                              
+                                  </div>
                                 <div class="fs-3 fw-light text-muted">I can help your business to</div>
                                 <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Get online and grow fast</span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
@@ -176,15 +184,15 @@
                 </div>
             </header>
             <!-- About Section-->
-            <section class="bg-light py-5">
+            <section class="bg-black py-5">
                 <div class="container px-5">
                     <div class="row gx-5 justify-content-center">
                         <div class="col-xxl-8">
                             <div class="text-center my-5">
                                 <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
                                 
-                                <h4 id="element" class="lead fw-light mb-4">My name is <strong>Liyan</strong>  and I help brands grow.</h4>
-                                <p class="text-muted">I'm a web developer. I can develop website using Laravel framework and bootstrap. I can also create website with PHP Native and My SQL</p>
+                                <h4 id="element" class="lead fw-light mb-4 text-white">My name is <strong>Liyan</strong>  and I help brands grow.</h4>
+                                <p class="text-white">I'm a web developer. I can develop website using Laravel framework and bootstrap. I can also create website with PHP Native and My SQL</p>
                                 <div class="d-flex justify-content-center fs-2 gap-4">
                                     <a class="text-gradient" href="https://www.facebook.com/moch.m.792"><i class="bi bi-facebook"></i></a>
                                     <a class="text-gradient" href="https://www.linkedin.com/in/moch-apriyanto-mahaliyan-861b80210/"><i class="bi bi-linkedin"></i></a>
@@ -198,7 +206,7 @@
             </section>
         </main>
         <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
+        <footer class="bg-purple py-4 mt-auto text-white">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto"><div class="small m-0">Copyright &copy; Liyan 2023</div></div>
@@ -213,7 +221,47 @@
             </div>
         </footer>
 
-        
+        <!-- script animation -->
+        <script>
+
+                const text = document.querySelector(".sec-text");
+              
+                const textLoad = () => {
+              
+                  setTimeout(() => {
+              
+                    text.textContent = "Web Developer";
+              
+                  }, 0);
+              
+                  setTimeout(() => {
+              
+                    text.textContent = "Freelancer";
+              
+                  }, 4000);
+              
+                  setTimeout(() => {
+              
+                    text.textContent = "IT Support";
+              
+                  }, 8000);
+              
+                }
+              
+                
+              
+                textLoad();
+              
+                setInterval(textLoad, 12000);
+              
+                
+              
+                
+              
+                
+
+              
+        </script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     new TypeIt("#element").go();
